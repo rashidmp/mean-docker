@@ -1,0 +1,16 @@
+{
+  "name": "@mean-docker/shared",
+  "version": "0.0.0",
+  "private": true,
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start:dev": "npm run watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}

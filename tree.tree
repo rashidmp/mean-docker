@@ -1,0 +1,76 @@
+.
+├── client
+│   ├── README.md
+│   ├── angular.json
+│   ├── package.json
+│   ├── public
+│   │   └── favicon.ico
+│   ├── src
+│   │   ├── app
+│   │   │   ├── app.component.html
+│   │   │   ├── app.component.scss
+│   │   │   ├── app.component.spec.ts
+│   │   │   ├── app.component.ts
+│   │   │   ├── app.config.ts
+│   │   │   └── app.routes.ts
+│   │   ├── index.html
+│   │   ├── main.ts
+│   │   └── styles.scss
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   └── tsconfig.spec.json
+├── package-lock.json
+├── package.json
+├── server
+│   ├── build
+│   │   ├── config
+│   │   │   └── config.js
+│   │   ├── controllers
+│   │   │   ├── author.controller.js
+│   │   │   └── book.controller.js
+│   │   ├── index.js
+│   │   ├── lib
+│   │   │   └── logging.js
+│   │   ├── middleware
+│   │   │   └── ValidateSchema.js
+│   │   ├── models
+│   │   │   ├── author.model.js
+│   │   │   └── book.model.js
+│   │   └── routes
+│   │       └── v1
+│   │           ├── author.routes.js
+│   │           ├── book.routes.js
+│   │           └── index.js
+│   ├── nodemon.json
+│   ├── package.json
+│   ├── src
+│   │   ├── config
+│   │   │   └── config.ts
+│   │   ├── controllers
+│   │   │   ├── author.controller.ts
+│   │   │   └── book.controller.ts
+│   │   ├── index.ts
+│   │   ├── lib
+│   │   │   └── logging.ts
+│   │   ├── middleware
+│   │   │   └── ValidateSchema.ts
+│   │   ├── models
+│   │   │   ├── author.model.ts
+│   │   │   └── book.model.ts
+│   │   └── routes
+│   │       └── v1
+│   │           ├── author.routes.ts
+│   │           ├── book.routes.ts
+│   │           └── index.ts
+│   └── tsconfig.json
+├── shared
+│   ├── build
+│   │   └── index.js
+│   ├── nodemon.json
+│   ├── package.json
+│   ├── src
+│   │   └── index.ts
+│   └── tsconfig.json
+└── tree.tree
+
+25 directories, 49 files
