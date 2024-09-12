@@ -1,0 +1,33 @@
+services:
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+      target: production-serve
+    ports:
+      - '80:80'
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+      target: production
+    ports:
+      - '1337:1337'
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongodb_data_prod:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=mongoadmin
+
+volumes:
+  mongodb_data_prod:

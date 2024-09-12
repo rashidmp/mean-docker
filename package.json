@@ -8,10 +8,13 @@
     "start:shared": "npm run build -w shared",
     "start:shared:dev": "npm run start:dev -w shared",
     "start:server": "npm run start -w server",
-    "start:server:dev": "npm run start:dev -w server",
+    "start:server:dev": "concurrently \"npm run start:shared:dev\" \"npm run start:dev -w server\"",
     "start:client": "npm run build -w client && npm run start -w client",
-    "start:client:dev": "npm run start:dev -w client",
-    "build": "npm run build -w shared && npm run build -w server && npm run build -w client"
+    "start:client:dev": "concurrently \"npm run start:shared:dev\" \"npm run start:dev -w client\"",
+    "build": "npm run build -w shared && npm run build -w server && npm run build -w client",
+    "build:shared": "npm run build -w shared",
+    "build:server": "npm run build:shared && npm run build -w server",
+    "build:client": "npm run build:shared && npm run build -w client"
   },
   "keywords": [],
   "author": "",

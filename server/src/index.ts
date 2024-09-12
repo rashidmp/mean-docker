@@ -10,7 +10,7 @@ hello();
 const app = express();
 
 mongoose
-  .connect(config.mongo.url, { retryWrites: true, w: 'majority' })
+  .connect(config.mongo.url, { retryWrites: true, w: 'majority', dbName: config.mongo.db })
   .then(() => (Logging.info('Mongo connected successfully.'), startServer()))
   .catch((error) => Logging.error(error));
 
